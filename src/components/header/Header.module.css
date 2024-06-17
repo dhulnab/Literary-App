@@ -1,0 +1,31 @@
+.header {
+  color: #fff;
+  background-color: #5a4b39;
+  position: fixed;
+  bottom: 0px;
+  z-index: 999;
+  width: 100%;
+}
+.headerContent ul {
+  margin: 0 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 7px;
+}
+.account {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.headerContent ul li svg{
+  cursor: pointer;
+  font-size: 25px;
+  margin-top: 4px;
+}
+.add {
+  transform: scaleX(-1);
+}
