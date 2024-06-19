@@ -1,61 +1,92 @@
-.topHeader {
+.header {
   height: 60px;
   position: sticky;
   top: 0px;
   left: 0px;
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 999;
+  background-color: #5a4b39;
 }
 
-.topHeaderContent {
+.headerContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
   flex-direction: row-reverse;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.search button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px;
+}
+.search input {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+.search input:focus {
+  outline: none;
+}
+.search input::placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Amiri", serif;
+}
+.account {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+.logo {
+  text-align: right;
+  padding: 10px 20px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
   font-family: "Amiri", serif;
-  background-color: #5a4b39;
   z-index: 999;
 }
+.listIcons {
+  margin-left: 12px;
+}
 
-.bottomHeader {
+.listIcons ul {
   color: #fff;
-  background-color: #5a4b39;
-  position: fixed;
-  bottom: 10px;
-  z-index: 999;
-  width: 96%;
-  border-radius: 20px;
-  margin-left: 2%;
-  padding: 6px 0;
-}
-
-.bottomHeaderContent ul {
-  margin: 0 10px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  padding: 7px;
 }
 
-.account {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: #ccc;
-}
-
-.bottomHeaderContent ul li svg {
+.listIcons li {
+  margin-right: 20px;
   cursor: pointer;
-  font-size: 25px;
-  margin-top: 4px;
+  font-size: 30px;
+}
+.listIcons svg {
+  margin-top: 6px;
 }
 
-.add {
-  transform: scaleX(-1);
+@media only screen and (max-width: 500px) {
+  .search {
+    display: none;
+  }
+
+  .listIcons {
+    display: none;
+  }
 }

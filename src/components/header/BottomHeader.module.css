@@ -1,0 +1,43 @@
+.bottomHeader {
+  display: none;
+}
+
+.account {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.add {
+  transform: scaleX(-1);
+}
+@media only screen and (max-width: 500px) {
+  .bottomHeader {
+    display: block;
+    color: #fff;
+    background-color: #5a4b39;
+    position: fixed;
+    bottom: 10px;
+    z-index: 999;
+    width: 96%;
+    border-radius: 20px;
+    margin-left: 2%;
+    padding: 6px 0;
+  }
+
+  .bottomHeaderContent ul {
+    margin: 0 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 7px;
+  }
+  .bottomHeaderContent ul li svg {
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 4px;
+  }
+}

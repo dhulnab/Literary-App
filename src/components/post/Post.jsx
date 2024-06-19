@@ -19,71 +19,69 @@ function Post({ publisher, text, img }) {
 
   return (
     <div className={styles.postContainer}>
-      <Container>
-        <div className={styles.publisher}>
-          <div>
-            <Image
-              src={img ? img : defaultPublisher}
-              alt="publisher"
-              width={40}
-              height={40}
-            />
+      <div className={styles.publisher}>
+        <div>
+          <Image
+            src={img ? img : defaultPublisher}
+            alt="publisher"
+            width={40}
+            height={40}
+          />
+        </div>
+        <p>{publisherName}</p>
+      </div>
+      <div className={styles.contentContainer}>
+        <div
+          className={styles.background}
+          style={{ backgroundImage: `url(${backgroundImage.src})` }}
+        ></div>
+        {poem ? (
+          <div className={styles.content}>
+            <div className={styles.text}>
+              <p className={styles.first}>{poem[0]}</p>
+              <p className={styles.second}>{poem[1]} </p>
+            </div>
+            <div className={styles.text}>
+              <p className={styles.first}>{poem[2]} </p>
+              <p className={styles.second}>{poem[3]} </p>
+            </div>
           </div>
-          <p>{publisherName}</p>
-        </div>
-        <div className={styles.contentContainer}>
-          <div
-            className={styles.background}
-            style={{ backgroundImage: `url(${backgroundImage.src})` }}
-          ></div>
-          {poem ? (
-            <div className={styles.content}>
-              <div className={styles.text}>
-                <p className={styles.first}>{poem[0]}</p>
-                <p className={styles.second}>{poem[1]} </p>
-              </div>
-              <div className={styles.text}>
-                <p className={styles.first}>{poem[2]} </p>
-                <p className={styles.second}>{poem[3]} </p>
-              </div>
+        ) : (
+          <div className={styles.content}>
+            <div className={styles.text}>
+              <p className={styles.first}>
+                كُنْ وَاثِقًا ، كُنْ مُؤْمِنًا ، كُنْ آمِنًا
+              </p>
+              <p className={styles.second}>
+                كُنْ لَيِّنًا ، كُنْ دَائِمَ البَسَمَاتِ
+              </p>
             </div>
-          ) : (
-            <div className={styles.content}>
-              <div className={styles.text}>
-                <p className={styles.first}>
-                  كُنْ وَاثِقًا ، كُنْ مُؤْمِنًا ، كُنْ آمِنًا
-                </p>
-                <p className={styles.second}>
-                  كُنْ لَيِّنًا ، كُنْ دَائِمَ البَسَمَاتِ
-                </p>
-              </div>
-              <div className={styles.text}>
-                <p className={styles.first}>
-                  كُنْ وَاثِقًا ، كُنْ مُؤْمِنًا ، كُنْ آمِنًا
-                </p>
-                <p className={styles.second}>
-                  كُنْ لَيِّنًا ، كُنْ دَائِمَ البَسَمَاتِ
-                </p>
-              </div>
+            <div className={styles.text}>
+              <p className={styles.first}>
+                كُنْ وَاثِقًا ، كُنْ مُؤْمِنًا ، كُنْ آمِنًا
+              </p>
+              <p className={styles.second}>
+                كُنْ لَيِّنًا ، كُنْ دَائِمَ البَسَمَاتِ
+              </p>
             </div>
-          )}
-        </div>
-        <div className={styles.action}>
-          <ul className={styles.subActionList}>
-            <li>
-              <LuHeartHandshake />
-            </li>
-            <li>
-              <RiShareCircleFill />
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <FaRegBookmark />
-            </li>
-          </ul>
-        </div>
-      </Container>
+          </div>
+        )}
+      </div>
+      <div className={styles.action}>
+        <ul className={styles.subActionList}>
+          <li>
+            <LuHeartHandshake />
+          </li>
+          <li>
+            <RiShareCircleFill />
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <FaRegBookmark />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
