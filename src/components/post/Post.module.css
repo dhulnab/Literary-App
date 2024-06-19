@@ -9,66 +9,94 @@
   border-bottom: 1px solid #756045;
   display: flex;
   align-items: center;
-  padding: 25px 20px;
+  padding: 30px 18px;
 }
+
 .publisher div {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: #eee;
   margin-left: 10px;
-  position: "relative";
+  position: relative;
   overflow: hidden;
 }
+
 .publisher div img {
- object-fit: cover;
+  object-fit: cover;
 }
+
 .publisher p {
   font-family: "Amiri", serif;
   font-size: 20px;
 }
 
-.background {
-  position: relative;
-  height: 350px;
-}
-.background img {
-  object-fit: cover;
-}
-.contentContainer {
-  height: 350px;
-  overflow: hidden;
-}
 .content {
   text-align: center;
   font-family: "Amiri Quran", serif;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  top: -250px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
 }
 
 .content .text .first {
   position: relative;
   right: -50px;
 }
+
 .content .text .second {
   position: relative;
   left: -50px;
+  top: -5px;
 }
+
 .postContainer ul {
   list-style-type: none;
 }
+
 .action {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 24px;
   border-top: 1px solid #756045;
   font-size: 25px;
 }
+
 .subActionList {
   display: flex;
   justify-content: space-between;
 }
+
 .subActionList li {
   margin-left: 20px;
 }

@@ -5,9 +5,9 @@ import { LuHeartHandshake } from "react-icons/lu";
 import { RiShareCircleFill } from "react-icons/ri";
 import { FaRegBookmark } from "react-icons/fa";
 import Container from "../container/Container";
-import background from "@/public/background.jpg";
 import Image from "next/image";
 import defaultPublisher from "@/public/defaultPublisherImage.jpg";
+import background from "@/public/background.jpg";
 
 function Post({ publisher, text, img }) {
   const defaultName = "علي إبن ابي طالب";
@@ -15,19 +15,27 @@ function Post({ publisher, text, img }) {
     publisher ? publisher : defaultName
   );
   const [poem, setPoem] = useState(text);
+  const [backgroundImage, setBackground] = useState(background);
+
   return (
     <div className={styles.postContainer}>
       <Container>
         <div className={styles.publisher}>
           <div>
-            <Image src={img ? img : defaultPublisher} alt="publisher"  width={40} height={40}/>
+            <Image
+              src={img ? img : defaultPublisher}
+              alt="publisher"
+              width={40}
+              height={40}
+            />
           </div>
           <p>{publisherName}</p>
         </div>
         <div className={styles.contentContainer}>
-          <div className={styles.background}>
-            <Image src={background} alt="background" fill />
-          </div>
+          <div
+            className={styles.background}
+            style={{ backgroundImage: `url(${backgroundImage.src})` }}
+          ></div>
           {poem ? (
             <div className={styles.content}>
               <div className={styles.text}>

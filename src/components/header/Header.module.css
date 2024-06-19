@@ -1,13 +1,40 @@
-.header {
+.topHeader {
+  height: 60px;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+}
+
+.topHeaderContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-direction: row-reverse;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Amiri", serif;
+  background-color: #5a4b39;
+  z-index: 999;
+}
+
+.bottomHeader {
   color: #fff;
   background-color: #5a4b39;
   position: fixed;
-  bottom: 0px;
+  bottom: 10px;
   z-index: 999;
-  width: 100%;
+  width: 96%;
+  border-radius: 20px;
+  margin-left: 2%;
+  padding: 6px 0;
 }
-.headerContent ul {
-  margin: 0 20px;
+
+.bottomHeaderContent ul {
+  margin: 0 10px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -15,17 +42,20 @@
   flex-direction: row-reverse;
   padding: 7px;
 }
+
 .account {
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-color: #ccc;
 }
-.headerContent ul li svg{
+
+.bottomHeaderContent ul li svg {
   cursor: pointer;
   font-size: 25px;
   margin-top: 4px;
 }
+
 .add {
   transform: scaleX(-1);
 }
