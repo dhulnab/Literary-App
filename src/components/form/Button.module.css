@@ -1,0 +1,13 @@
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-family: "Amiri", serif;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all linear 200ms;
+}
+.button:active {
+  transform: scale(0.96);
+}

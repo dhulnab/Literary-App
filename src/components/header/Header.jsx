@@ -22,7 +22,7 @@ function Header() {
         <Container>
           <div className={styles.headerContent}>
             <div className={styles.logo}>
-              <p>‘‘ أَدْبْ ,,</p>
+              <p>‘‘ أَدَبْ ,,</p>
             </div>
             <div className={styles.search}>
               <input type="text" placeholder="بحث" />
