@@ -82,6 +82,11 @@ function Post({ publisher, text, img }) {
           </li>
         </ul>
       </div>
+      <div className={styles.likes}>
+        <p>
+          <b>1212 </b>إعجاب بهذا المنشور
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,39 +1,29 @@
-.main {
-  display: flex;
-}
-.loginContainer {
+.signupContainer1000px {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   height: 100vh;
-  width: 50%;
+  width: 100%;
   background-color: #f1f2f3;
   font-family: "Amiri", serif;
 }
-.loginContainer h5 {
-  cursor: pointer;
-}
-.loginContainer h5 a {
+.signupContainer1000px h5 a {
   color: #000;
 }
-.login {
+.signup {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-.loginContainer div {
+.signupContainer1000px div {
   text-align: center;
 }
-.background {
-  height: 100vh;
-  width: 50%;
-  position: relative;
-}
-.background img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+@media only screen and (max-width: 500px) {
+    .signupContainer1000px{
+        justify-content: center;
+        gap: 18px;
+    }
 }

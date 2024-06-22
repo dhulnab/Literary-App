@@ -1,0 +1,64 @@
+.main {
+  display: flex;
+}
+
+.background {
+  height: 100vh;
+  width: 50%;
+  position: relative;
+}
+.background img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.loginForm1000px {
+  width: 50%;
+}
+.loginForm500px {
+  display: none;
+}
+@media only screen and (max-width: 500px) {
+  .loginForm1000px {
+    display: none;
+  }
+  .background {
+    display: none;
+  }
+  .loginForm500px {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../../../public/login.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .blur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 15px;
+    width: 70%;
+  }
+
+  .blur h2,
+  .blur h3 {
+    font-size: 16px;
+  }
+  .blur h5,
+  .blur p {
+    font-size: 12px;
+  }
+  .blur input {
+    width: 130%;
+  }
+}

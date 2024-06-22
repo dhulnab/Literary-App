@@ -5,7 +5,7 @@ import Post from "../components/post/Post";
 
 export default function Home() {
   return (
-    <main>
+    <div className={styles.main}>
       <Header />
       <Post
         text={[
@@ -55,6 +55,6 @@ export default function Home() {
 `,
         ]}
       />
-    </main>
+    </div>
   );
 }
