@@ -10,7 +10,7 @@ import defaultPublisher from "@/public/defaultPublisherImage.jpg";
 import background from "@/public/background.jpg";
 
 function Post({ publisher, text, img }) {
-  const defaultName = "علي إبن ابي طالب";
+  const defaultName = "ذوالفقار علي";
   const [publisherName, setPublisher] = useState(
     publisher ? publisher : defaultName
   );

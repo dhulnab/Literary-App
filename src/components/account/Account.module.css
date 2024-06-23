@@ -1,0 +1,78 @@
+.main {
+  background-color: #000;
+}
+.content {
+  width: 100%;
+  text-align: right;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 12px;
+  font-family: "Amiri", serif;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.avatar img {
+  object-fit: cover;
+}
+.personalInfo {
+  color: #fff;
+}
+.numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.numbers div {
+  display: grid;
+  grid-template-rows: repeat(1, 30px);
+  grid-template-columns: repeat(3, 60px);
+}
+
+.numbers div .posts {
+  grid-column: 1/2;
+}
+.numbers div .followers {
+  grid-column: 2/3;
+}
+.numbers div .following {
+  grid-column: 3/4;
+}
+.numbers div .postsNum {
+  grid-column: 1/2;
+}
+.numbers div .followersNum {
+  grid-column: 2/3;
+}
+.numbers div .followingNum {
+  grid-column: 3/4;
+}
+.bio {
+  max-width: 182px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  height: 60px;
+  font-size: 22px;
+}
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 250px;
+}

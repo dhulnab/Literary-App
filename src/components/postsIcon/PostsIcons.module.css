@@ -1,0 +1,59 @@
+.myPostsIcon {
+  border: 3.5px solid #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 36.5px;
+  height: 36.5px;
+  display: grid;
+  gap: 0px;
+  grid-template-rows: repeat(3, 10px);
+  grid-template-columns: repeat(3, 10px);
+  transform: scale(0.75);
+}
+.myPostsIcon .first {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border: 1px solid #fff;
+}
+.myPostsIcon .second {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  border: 1px solid #fff;
+}
+
+.myPostsIcon .third {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  border: 1px solid #fff;
+}
+.myPostsIcon .fourth {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border: 1px solid #fff;
+}
+.myPostsIcon .fifth {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border: 1px solid #fff;
+}
+.myPostsIcon .sixth {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  border: 1px solid #fff;
+}
+
+.myPostsIcon .seventh {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  border: 1px solid #fff;
+}
+.myPostsIcon .eighth {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  border: 1px solid #fff;
+}
+.myPostsIcon .ninth {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  border: 1px solid #fff;
+}
