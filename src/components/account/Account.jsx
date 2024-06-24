@@ -16,9 +16,9 @@ function Account() {
             <div className={styles.personalInfo}>
               <div className={styles.numbers}>
                 <div>
-                  <h3 className={styles.posts}>المنشورات</h3>
-                  <h3 className={styles.followers}>المتابعين</h3>
-                  <h3 className={styles.following}>يتابع</h3>
+                  <h4 className={styles.posts}>المنشورات</h4>
+                  <h4 className={styles.followers}>المتابعين</h4>
+                  <h4 className={styles.following}>يتابع</h4>
                 </div>
                 <div>
                   <p className={styles.postsNum}>155</p>
@@ -27,7 +27,7 @@ function Account() {
                 </div>
               </div>
               <div>
-                <h4 className={styles.name}>علي احمد</h4>
+                <h3 className={styles.name}>علي احمد</h3>
                 <p className={styles.username}>@rr4_5</p>
               </div>
               <div className={styles.bio}>

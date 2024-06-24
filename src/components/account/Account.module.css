@@ -27,6 +27,9 @@
 .personalInfo {
   color: #fff;
 }
+.username {
+  color: #ccc;
+}
 .numbers {
   display: flex;
   align-items: center;

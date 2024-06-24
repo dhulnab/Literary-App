@@ -1,6 +1,10 @@
 .bottomHeader {
   display: none;
 }
+.bottomHeader a {
+  text-decoration: none;
+  color: #000;
+}
 
 .account {
   width: 25px;

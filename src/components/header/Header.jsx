@@ -10,9 +10,10 @@ import { BiMessageSquareAdd } from "react-icons/bi";
 import { useGlobalStates } from "@/src/globalStates";
 import Image from "next/image";
 import accountImg from "@/public/defaultPublisherImage.jpg";
+import Link from "next/link";
 
 function Header() {
-  const { setOpenAccount } = useGlobalStates();
+  const { setPage } = useGlobalStates();
   const scrollDirection = useScrollDirection();
   return (
     <>
@@ -36,11 +37,10 @@ function Header() {
             </div>
             <div className={styles.listIcons}>
               <ul>
-                <li
-                  className={styles.home}
-                  onClick={() => setOpenAccount(false)}
-                >
-                  <GoHomeFill />
+                <li className={styles.home} onClick={() => setPage("Home")}>
+                  <Link href="/">
+                    <GoHomeFill />
+                  </Link>
                 </li>
                 <li className={styles.add}>
                   <BiMessageSquareAdd />
@@ -48,9 +48,11 @@ function Header() {
                 <li>
                   <div
                     className={styles.account}
-                    onClick={() => setOpenAccount(true)}
+                    onClick={() => setPage("Account")}
                   >
-                    <Image src={accountImg} alt="none" fill/>
+                    <Link href="/account">
+                      <Image src={accountImg} alt="none" fill />
+                    </Link>
                   </div>
                 </li>
               </ul>

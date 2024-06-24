@@ -6,15 +6,18 @@ import styles from "./BottomHeader.module.css";
 import { useGlobalStates } from "@/src/globalStates";
 import accountImg from "@/public/defaultPublisherImage.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 function BottomHeader() {
-  const { setOpenAccount } = useGlobalStates();
+  const { setPage } = useGlobalStates();
   return (
     <div className={styles.bottomHeader}>
       <div className={styles.bottomHeaderContent}>
         <ul>
-          <li className={styles.home} onClick={() => setOpenAccount(false)}>
-            <GoHomeFill />
+          <li className={styles.home} onClick={() => setPage("Home")}>
+            <Link href="/">
+              <GoHomeFill />
+            </Link>
           </li>
           <li className={styles.search}>
             <FiSearch />
@@ -23,12 +26,10 @@ function BottomHeader() {
             <BiMessageSquareAdd />
           </li>
           <li>
-            <div
-              className={styles.account}
-              onClick={() => setOpenAccount(true)}
-            >
-              {" "}
-              <Image src={accountImg} alt="none" fill />
+            <div className={styles.account} onClick={() => setPage("Account")}>
+              <Link href="/account">
+                <Image src={accountImg} alt="none" fill />
+              </Link>
             </div>
           </li>
         </ul>
